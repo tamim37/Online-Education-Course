@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {margin:0;}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+
+li input[id=btn] {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+}
+li input[id=btn] {
+    /*background-color: #111;*/
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    
+   
+}
+li input[id=btn] {
+     border: none;
+     outline:none;
+}
+
+li input[id=btn]:hover {
+    background-color: #111;
+    color: white;
+}
+
+
+</style>
+</head>
+<body>
+
+<!-- <ul>
+  <li><a class="active" href="#home">Dashboard</a></li>
+  <li><a href="teacherCourse">My Courses</a><br/></li>
+  <li><a href="course_list" target="_blank">Course Lists</a></li>
+  <li><a href="addcourse">Add Course</a></li>
+  
+
+  <li><a href="editCrs">Edit Course</a></li>
+  
+</ul> -->
+
+
+
+<ul>
+ <!--  <li><a class="active" href="#home">Dashboard</a></li> -->
+
+  <li> 
+ <form action="tecHomePage"> 
+
+       <input type="hidden" name="teacherName" value={{tecName}}>
+       
+       <input id="btn" type="submit" name="weekNo" value="Dashboard" />
+    
+  </form>
+  </li>
+
+  <!-- <li><a href="#my_course">My Courses</a><br/></li> -->
+
+  <li> 
+ <form action="teacherCourse"> 
+
+       <input type="hidden" name="teacherName" value={{tecName}}>
+       
+       <input id="btn" type="submit" name="weekNo" value="My Courses" />
+    
+  </form>
+  </li>
+
+  <!-- <li><a href="course_list" target="_blank">Course Lists</a></li> -->
+
+
+
+  <!-- <li><a href="#about">About</a></li> -->
+
+  <li> 
+ <form action="addcourse"> 
+
+       <input type="hidden" name="teacherName" value={{tecName}}>
+       
+       <input id="btn" type="submit" name="weekNo" value="Add Course" />
+    
+  </form>
+  </li>
+
+  
+
+   <li> 
+ <form action="editCrs"> 
+
+       <input type="hidden" name="teacherName" value={{tecName}}>
+       
+       <input id="btn" type="submit" name="weekNo" value="Edit Course" />
+    
+  </form>
+  </li>
+
+
+    <li> 
+ <form action="loginAsTeacher"> 
+
+      <input type="hidden" name="teacherName" value={{tecName}}>
+       
+       <input id="btn" type="submit" name="weekNo" value="Log Out" />
+    
+  </form>
+  </li>
+
+
+
+</ul>
+
+
+
+
+<div style="padding:20px;margin-top:30px;background-color:#1abc9c;height:1500px;">
+
+
+{% with namess=tecName %}     
+
+    <h2>UserName  :  {{namess}}</h2>
+
+ 
+{% endwith %}
+
+
+
+
+</div>
+
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<style>
+body {margin:0;}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+
+li input[id=btn] {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+}
+li input[id=btn] {
+    /*background-color: #111;*/
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    
+   
+}
+li input[id=btn] {
+     border: none;
+     outline:none;
+}
+
+li input[id=btn]:hover {
+    background-color: #111;
+    color: white;
+}
+
+
+</style>
+
+
+
+
+<style>
+
+
+input[id=bigbutton] {
+    width: 40%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[id=bigbutton]:hover {
+    background-color: #45a049;
+}
+
+div {
+    border-radius: 5px;
+    /*background-color: #f2f2f2;*/
+    padding: 10px;
+}
+
+/***FIRST STYLE THE BUTTON***/
+input#bigbutton {
+width:500px;
+background: #3e9cbf; the colour of the button
+padding: 8px 14px 10px; /*apply some padding inside the button*/
+border:1px solid #3e9cbf; /*required or the default border for the browser will appear*/
+cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
+/*style the text*/
+font-size:1.5em;
+font-family:Oswald, sans-serif; /*Oswald is available from http://www.google.com/webfonts/specimen/Oswald*/
+letter-spacing:.1em;
+text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3); /*give the text a shadow - doesn't appear in Opera 12.02 or earlier*/
+color: #fff;
+/*use box-shadow to give the button some depth - see cssdemos.tupence.co.uk/box-shadow.htm#demo7 for more info on this technique*/
+-webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+-moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+/*give the corners a small curve*/
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+border-radius: 10px;
+}
+/***SET THE BUTTON'S HOVER AND FOCUS STATES***/
+input#bigbutton:hover, input#bigbutton:focus {
+color:#D4B115;
+/*reduce the size of the shadow to give a pushed effect*/
+-webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+-moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+}
+h2 {
+    color: #CC00AC ;
+}
+h3{
+  color:#CFAD15;
+}
+h1{
+  color:#33FFFF  ;
+}
+
+
+
+
+
+#header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:10px;
+    
+    width:100%;
+}
+#nav {
+    line-height:30px;
+    background-color:#002538;
+    height:2200px;
+    width:15%;
+    float:left;
+    padding:5px;        
+}
+#section {
+    /*width:80%;*/
+    float:left;
+    padding:40px;
+    height:100%;    
+}
+#footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+   padding:5px;    
+}
+
+x{
+  color: #AB5F00;
+}
+
+
+
+</style>
+
+
+
+</head>
+
+
+<body>
+
+<ul>
+ <!--  <li><a class="active" href="#home">Dashboard</a></li> -->
+
+  <li> 
+ <form action="homePage"> 
+
+       <input type="hidden" name="std" value={{name}}>
+       
+       <input id="btn" type="submit" name="weekNo" value="Dashboard" />
+    
+  </form>
+  </li>
+
+  <!-- <li><a href="#my_course">My Courses</a><br/></li> -->
+
+  <li> 
+ <form action="myCrsShow"> 
+
+       <input type="hidden" name="std" value={{name}}>
+       
+       <input id="btn" type="submit" name="weekNo" value="My Courses" />
+    
+  </form>
+  </li>
+
+  <!-- <li><a href="course_list" target="_blank">Course Lists</a></li> -->
+
+<li> 
+ <form action="course_list"> 
+
+       <input type="hidden" name="std" value={{name}}>
+       
+       <input id="btn" type="submit" name="weekNo" value="Course Lists" />
+    
+  </form>
+  </li>
+
+
+<!--   <li><a href="#news">News</a></li> -->
+
+  <li> 
+ <form action=""> 
+
+       <input type="hidden" name="std" value={{name}}>
+       
+       <input id="btn" type="submit" name="weekNo" value="News" />
+    
+  </form>
+  </li>
+
+ <!--  <li><a href="#contact">Contact</a></li> -->
+  <li> 
+ <form action=""> 
+
+       <input type="hidden" name="std" value={{name}}>
+       
+       <input id="btn" type="submit" name="weekNo" value="Contact" />
+    
+  </form>
+  </li>
+  <!-- <li><a href="#about">About</a></li> -->
+
+  <li> 
+ <form action=""> 
+
+       <input type="hidden" name="std" value={{name}}>
+       
+       <input id="btn" type="submit" name="weekNo" value="About" />
+    
+  </form>
+  </li>
+
+     <li> 
+ <form action="home"> 
+
+       
+       
+       <input id="btn" type="submit" name="weekNo" value="Log Out" />
+    
+  </form>
+  </li>
+</ul>
+
+
+
+
+
+
+<div style="padding:0px;margin-top:40px;background-color:#034F4E;height:100%;">
+
+
+<div id="header">
+<h1>QUIZ</h1>
+</div>
+
+<div id="nav">
+<x>
+COURSE NAME: {{b}}<br>
+QUIZ NO: {{quizno.quizNo}}<br>
+
+WEEK NO: {{a}}
+
+</x>
+</div>
+
+<div id="section">
+
+
+
+
+{% for i in questions %}
+
+
+<h1>{{i.question}}</h1><br>
+
+
+
+<form action="#n" >
+
+<h3>
+  <input type="radio" name={{i.id}}  id={{i.answerField}} value={{i.option1}}> {{i.option1}}<br>
+  <input type="radio" name={{i.id}}  id={{i.answerField}} value={{i.option2}}> {{i.option2}}<br>
+  <input type="radio" name={{i.id}}  id={{i.answerField}} value={{i.option3}}> {{i.option3}}<br>
+
+  <input type="radio" name={{i.id}}  id={{i.answerField}} value={{i.option4}}> {{i.option4}}<br>
+
+</h3>
+    <input type="button"  value="Submit" name={{i.id}}  
+     onclick="submitForm(name);"/>
+   
+    
+</form>
+
+
+
+<h2  id={{i.id}}>Result:</h2>
+
+
+
+<script>
+  
+function submitForm(x,y) { 
+  
+ 
+var radios = document.getElementsByName(x);
+
+
+for (var i = 0, length = radios.length; i < length; i++) {
+    if (radios[i].checked) {
+      if(radios[i].value ===radios[i].id)
+     {   document.getElementById(radios[i].name).innerHTML = 'your answer is correct';
+    }
+        // do whatever you want with the checked radio
+       else{
+        
+        document.getElementById(radios[i].name).innerHTML = 'your choose a wrong answer ';
+       }
+  
+    }
+
+}
+}
+
+</script>
+
+{% endfor %}
+
+
+</div>
+
+<div id="footer">
+ Copyright jewel.com
+</div>
+
+</body>
+</html>

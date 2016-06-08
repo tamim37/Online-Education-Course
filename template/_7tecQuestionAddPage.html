@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+
+input[type=submit] {
+    width: 20%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+
+/***FIRST STYLE THE BUTTON***/
+input#bigbutton {
+width:300px;
+background: #3e9cbf; /*the colour of the button*/
+padding: 8px 14px 10px; /*apply some padding inside the button*/
+border:1px solid #3e9cbf; /*required or the default border for the browser will appear*/
+cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
+/*style the text*/
+font-size:1.5em;
+font-family:Oswald, sans-serif; /*Oswald is available from http://www.google.com/webfonts/specimen/Oswald*/
+letter-spacing:.1em;
+text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3); /*give the text a shadow - doesn't appear in Opera 12.02 or earlier*/
+color: #fff;
+/*use box-shadow to give the button some depth - see cssdemos.tupence.co.uk/box-shadow.htm#demo7 for more info on this technique*/
+-webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+-moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+/*give the corners a small curve*/
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+border-radius: 10px;
+}
+/***SET THE BUTTON'S HOVER AND FOCUS STATES***/
+input#bigbutton:hover, input#bigbutton:focus {
+color:#dfe7ea;
+/*reduce the size of the shadow to give a pushed effect*/
+-webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+-moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+}
+
+
+</style>
+
+
+ 
+<style> 
+    .textbox2 {
+    padding: 1px 20px;
+    border: 0;
+    height: 35px;
+    width: 875px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    box-shadow: 1px 1px 0 0 #FFF, 5px 5px 40px 2px #BBB inset;
+    -moz-box-shadow: 1px 1px 0 0 #FFF, 5px 5px 40px 2px #BBB inset;
+    -webkit-box-shadow: 1px 1px 0 0 #FFF, 5px 5px 40px 2px #BBB inset;
+    -webkit-background-clip: padding-box;
+    outline: 0;
+}
+</style>
+
+ 
+<style> 
+    .textbox {
+    width: 475px;
+    border: solid 1px #ccc;
+    height: 36px;
+    background: #5E768D;
+    background: -moz-linear-gradient(top, #546A7F 0%, #5E768D 20%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #546A7F), color-stop(20%, #5E768D));
+    border-radius: 15px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 15px;
+    -moz-box-shadow: 0 1px 0 #f2f2f2;
+    -webkit-box-shadow: 0 1px 0 #F2F2F2;
+    font-family: sans-serif;
+    font-size: 15px;
+    color: #F2F2F2;
+    
+    text-shadow: 0 -1px 0 #334F71;
+}
+
+.textbox:focus {
+    background: #728EAA;
+    background: -moz-linear-gradient(top, #668099 0%, #728EAA 20%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #668099), color-stop(20%, #728EAA));
+    outline: 0;
+}
+
+
+
+</style> 
+
+<style>
+.font-style {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: #361E6B;
+  font-size: 25;
+  padding: 5;
+  text-shadow: 1px 1px 1px #FCD2D2;
+}
+</style>
+
+
+
+
+
+ 
+
+ 
+<style> 
+  .textboxanswer { 
+    background: white; 
+    border: 1px double #DDD; 
+    border-radius: 5px; 
+    box-shadow: 0 0 5px #333; 
+    color: #666; 
+    outline: none; 
+    height:25px; 
+    width: 75px; 
+  } 
+ </style> 
+
+
+
+<body>
+
+<div>
+
+<form action="addSingleQuestion">
+
+ <p class="font-style">Question</p><br/>
+
+<input class="textbox2" type="text" name="question"> 
+<br/>
+ <p class="font-style">Options</p><br/>
+
+
+
+ <input class="textbox"type="text" name="op1"> 
+<br><br> 
+<input class="textbox"type="text" name="op2"> 
+<br><br> 
+<input class="textbox"type="text" name="op3"> 
+<br><br> 
+<input class="textbox"type="text" name="op4"> 
+<br>
+
+<br/>
+
+ <p class="font-style">Answer Field</p><br/>
+
+ <input class="textboxanswer"type="text" name="ans"> 
+<br><br>
+  <input type="hidden" name="WeekNo" value={{WeekNo}}>
+   <input type="hidden" name="crsNo" value={{crsNo}}>
+
+
+<br/>
+<br/>
+<input id="bigbutton" type="submit" name="btn1" value="Add Another Question" />
+
+
+<input id="bigbutton" type="submit" name="btn2" value="Save & Finish" />
+
+
+
+
+</form>
+
+<form action="finishAdding">
+
+<input id="bigbutton" type="submit" name="btn3" value="Finish" />
+</form>
+
+
+
+</div>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

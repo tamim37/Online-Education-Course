@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+body {margin:0;}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+
+li input[id=btn] {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+}
+li input[id=btn] {
+    /*background-color: #111;*/
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    
+   
+}
+li input[id=btn] {
+     border: none;
+     outline:none;
+}
+
+li input[id=btn]:hover {
+    background-color: #111;
+    color: white;
+}
+
+
+</style>
+
+
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+</style>
+</head>
+<body>
+
+
+
+
+<ul>
+ <!--  <li><a class="active" href="#home">Dashboard</a></li> -->
+
+  <li> 
+ <form action="tecHomePage"> 
+
+       <input type="hidden" name="teacherName" value={{tecName}}>
+       
+       <input id="btn" type="submit" name="weekNo" value="Dashboard" />
+    
+  </form>
+  </li>
+
+  <!-- <li><a href="#my_course">My Courses</a><br/></li> -->
+
+  <li> 
+ <form action="teacherCourse"> 
+
+       <input type="hidden" name="teacherName" value={{tecName}}>
+       
+       <input id="btn" type="submit" name="weekNo" value="My Courses" />
+    
+  </form>
+  </li>
+
+  <!-- <li><a href="course_list" target="_blank">Course Lists</a></li> -->
+<!-- 
+<li> 
+ <form action="course_list"> 
+
+       <input type="hidden" name="teacherName" value={{tecName}}>
+       
+       <input id="btn" type="submit" name="weekNo" value="Course Lists" />
+    
+  </form>
+  </li> -->
+
+  <!-- <li><a href="#about">About</a></li> -->
+
+  <li> 
+ <form action="addcourse"> 
+
+      <input type="hidden" name="teacherName" value={{tecName}}>
+       
+       <input id="btn" type="submit" name="weekNo" value="Add Course" />
+    
+  </form>
+  </li>
+
+  
+
+   <li> 
+ <form action="editCrs"> 
+
+      <input type="hidden" name="teacherName" value={{tecName}}>
+       
+       <input id="btn" type="submit" name="weekNo" value="Edit Course" />
+    
+  </form>
+  </li>
+</ul>
+
+
+
+
+<div style="padding:0px;margin-top:50px;background-color:#1abc9c;height:1500px;">
+
+
+<table>
+  <tr>
+    <th>Course name</th>
+    <th>Course no</th>
+    <th>Info</th>
+    <th></th>
+  </tr>
+
+{% for i in teacherCourselist %}
+  <tr>
+    <td>{{i.course_name}}</td>
+    <td>{{i.course_no}}</td>
+    <td>{{i.course_additional_info}}</td>
+
+    <td>
+      <form action="courseDetailForTec">  
+        <input type="hidden" name="hidden_course_name" value={{i.course_name}}>
+
+        <input type="hidden" name="hiddenCrsNo" value={{i.course_no}}>
+
+        <input type="hidden" name="teacherName" value={{tecName}}>
+
+        <input type="submit" value="Details"/> 
+      </form>
+
+    </td> 
+   
+  </tr>
+{% endfor %}
+  
+ 
+</table>
+
+
+</div>
+
+</body>
+</html>
+
+

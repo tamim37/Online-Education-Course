@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+</style>
+</head>
+<body>
+
+<h2>Edit Course</h2>
+
+<table>
+  <tr>
+    <th>Course name</th>
+    <th>Course no</th>
+    <th>Info</th>
+    <th></th>
+  </tr>
+
+{% for i in teacherCourselist %}
+  <tr>
+    <td>{{i.course_name}}</td>
+    <td>{{i.course_no}}</td>
+    <td>{{i.course_additional_info}}</td>
+
+    <td>
+      <form action="editPage">  
+        <input type="hidden" name="courseName" value={{i.course_name}}>
+        <input type="hidden" name="crsNo" value={{i.course_no}}>
+
+        <input type="submit" value="View Details"/> 
+      </form>
+
+    </td> 
+   <!--  <td><a href="single_course_detail" target="_blank">Details</a></td> -->
+  </tr>
+{% endfor %}
+  
+ 
+</table>
+
+</body>
+</html>
+
+

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #857177}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+
+
+
+body {margin:0;}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+
+li input[id=btn] {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+}
+li input[id=btn] {
+    /*background-color: #111;*/
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    
+   
+}
+li input[id=btn] {
+     border: none;
+     outline:none;
+}
+
+li input[id=btn]:hover {
+    background-color: #111;
+    color: white;
+}
+
+
+
+
+</style>
+</head>
+<body>
+
+<ul>
+ <!--  <li><a class="active" href="#home">Dashboard</a></li> -->
+
+  <li> 
+ <form action="homePage"> 
+
+       <input type="hidden" name="std" value={{name}}>
+       
+       <input id="btn" type="submit" name="weekNo" value="Dashboard" />
+    
+  </form>
+  </li>
+
+  <!-- <li><a href="#my_course">My Courses</a><br/></li> -->
+
+  <li> 
+ <form action="myCrsShow"> 
+
+       <input type="hidden" name="std" value={{name}}>
+       
+       <input id="btn" type="submit" name="weekNo" value="My Courses" />
+    
+  </form>
+  </li>
+
+  <!-- <li><a href="course_list" target="_blank">Course Lists</a></li> -->
+
+<li> 
+ <form action="course_list"> 
+
+       <input type="hidden" name="std" value={{name}}>
+       
+       <input id="btn" type="submit" name="weekNo" value="Course Lists" />
+    
+  </form>
+  </li>
+
+
+<!--   <li><a href="#news">News</a></li> -->
+
+  <li> 
+ <form action=""> 
+
+       <input type="hidden" name="std" value={{name}}>
+       
+       <input id="btn" type="submit" name="weekNo" value="News" />
+    
+  </form>
+  </li>
+
+ <!--  <li><a href="#contact">Contact</a></li> -->
+  <li> 
+ <form action=""> 
+
+       <input type="hidden" name="std" value={{name}}>
+       
+       <input id="btn" type="submit" name="weekNo" value="Contact" />
+    
+  </form>
+  </li>
+  <!-- <li><a href="#about">About</a></li> -->
+
+  <li> 
+ <form action=""> 
+
+       <input type="hidden" name="std" value={{name}}>
+       
+       <input id="btn" type="submit" name="weekNo" value="About" />
+    
+  </form>
+  </li>
+
+     <li> 
+ <form action="home"> 
+
+       
+       
+       <input id="btn" type="submit" name="weekNo" value="Log Out" />
+    
+  </form>
+  </li>
+</ul>
+
+
+
+
+
+<div style="padding:0px;margin-top:50px;background-color:#1abc9c;height:1500px;">
+
+
+
+<table>
+  <tr>
+ 
+    <th>Course no</th>
+ <!--    <th>Info</th> -->
+    <th></th>
+  </tr>
+
+{% for i in context_course_list %}
+  <tr>
+    
+    <td>{{i.crs_no}}</td>
+    
+
+    <td>
+      <form action="regCrsShow">  
+       <!--  <input type="hidden" name="hidden_course_name" value={{i.course_name}}> -->
+<input type="hidden" name="takenCourseNo" value={{i.crs_no}}>
+
+         <input type="hidden" name="std" value={{name}}>
+
+        <input type="submit" value="Details"/> 
+      </form>
+
+    </td> 
+   
+  </tr>
+{% endfor %}
+  
+ 
+</table>
+
+</div>
+
+</body>
+</html>
+
+

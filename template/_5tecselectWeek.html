@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+
+input[type=submit] {
+    width: 20%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+
+
+</style>
+<body>
+
+<h3>Add Week</h3>
+
+{{qrsNo}}
+{{crsWeek}}
+{{weekArray}}
+
+{%for item in weekArray%}
+    <!-- <li>{{item}}</li> -->
+    <div>
+
+
+  <form action="insertIntoWeek" >
+
+    <input type="hidden" name="insertedWeekNo" value={{item}}>
+
+    <input type="hidden" name="x"
+     value={{qrsNo}}>
+     
+    <input type="submit" value="Insert Into week : {{item}}">
+  </form>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endfor %}
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

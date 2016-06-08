@@ -1,0 +1,372 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+
+
+<style>
+body {margin:0;}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+
+li input[id=btn] {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+}
+li input[id=btn] {
+    /*background-color: #111;*/
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    
+   
+}
+li input[id=btn] {
+     border: none;
+     outline:none;
+}
+
+li input[id=btn]:hover {
+    background-color: #111;
+    color: white;
+}
+
+
+</style>
+
+
+<style>
+
+
+input[type=button] {
+    width: 40%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[id=bigbutton]:hover {
+    background-color: #45a049;
+}
+
+div {
+    border-radius: 5px;
+    /*background-color: #f2f2f2;*/
+    padding: 10px;
+}
+
+/***FIRST STYLE THE BUTTON***/
+input#bigbutton {
+width:200px;
+background: #3e9cbf; the colour of the button
+padding: 8px 14px 10px; /*apply some padding inside the button*/
+border:1px solid #3e9cbf; /*required or the default border for the browser will appear*/
+cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
+/*style the text*/
+font-size:1.5em;
+font-family:Oswald, sans-serif; /*Oswald is available from http://www.google.com/webfonts/specimen/Oswald*/
+letter-spacing:.1em;
+text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3); /*give the text a shadow - doesn't appear in Opera 12.02 or earlier*/
+color: #fff;
+/*use box-shadow to give the button some depth - see cssdemos.tupence.co.uk/box-shadow.htm#demo7 for more info on this technique*/
+-webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+-moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+/*give the corners a small curve*/
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+border-radius: 10px;
+}
+/***SET THE BUTTON'S HOVER AND FOCUS STATES***/
+input#bigbutton:hover, input#bigbutton:focus {
+color:#D4B115;
+/*reduce the size of the shadow to give a pushed effect*/
+-webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+-moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+}
+h2 {
+    color: #CC00AC ;
+}
+h3{
+  color:#CFAD15;
+}
+h1{
+  color:#33FFFF  ;
+}
+
+
+
+
+
+#header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:10px;
+    
+    width:100%;
+}
+#nav {
+    line-height:30px;
+    background-color:#002538;
+    height:2200px;
+    width:15%;
+    float:left;
+    padding:5px;        
+}
+#section {
+    /*width:80%;*/
+    float:left;
+    padding:40px;
+    height:100%;    
+}
+#footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+   padding:5px;    
+}
+
+x{
+  color: #AB5F00;
+}
+
+
+
+
+
+
+
+
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/*video {
+    width:100%;
+    height: auto;
+}*/
+
+
+
+
+</style>
+</head>
+<body>
+
+<!-- <ul>
+  <li><a class="active" href="#home">Dashboard</a></li>
+  <li><a href="teacherCourse">My Courses</a><br/></li>
+  <li><a href="course_list" target="_blank">Course Lists</a></li>
+  <li><a href="addcourse">Add Course</a></li>
+  
+
+  <li><a href="editCrs">Edit Course</a></li>
+  
+</ul> -->
+
+
+
+<ul>
+ <!--  <li><a class="active" href="#home">Dashboard</a></li> -->
+
+  <li> 
+ <form action="tecHomePage"> 
+
+       <input type="hidden" name="teacherName" value={{tecName}}>
+       
+       <input id="btn" type="submit" name="weekNo" value="Dashboard" />
+    
+  </form>
+  </li>
+
+  <!-- <li><a href="#my_course">My Courses</a><br/></li> -->
+
+  <li> 
+ <form action="teacherCourse"> 
+
+       <input type="hidden" name="teacherName" value={{tecName}}>
+       
+       <input id="btn" type="submit" name="weekNo" value="My Courses" />
+    
+  </form>
+  </li>
+
+  <!-- <li><a href="course_list" target="_blank">Course Lists</a></li> -->
+
+<li> 
+ <form action="course_list"> 
+
+       <input type="hidden" name="teacherName" value={{tecName}}>
+       
+       <input id="btn" type="submit" name="weekNo" value="Course Lists" />
+    
+  </form>
+  </li>
+
+  <!-- <li><a href="#about">About</a></li> -->
+
+  <li> 
+ <form action="addcourse"> 
+
+      <input type="hidden" name="teacherName" value={{tecName}}>
+       
+       <input id="btn" type="submit" name="weekNo" value="Add Course" />
+    
+  </form>
+  </li>
+
+  
+
+   <li> 
+ <form action="editCrs"> 
+
+       <input type="hidden" name="teacherName" value={{tecName}}>
+       
+       <input id="btn" type="submit" name="weekNo" value="Edit Course" />
+    
+  </form>
+  </li>
+</ul>
+
+
+<div style="padding:0px;margin-top:30px;background-color:#034F4E;height:100%;">
+
+
+
+
+<div id="header">
+<h1>Quiz</h1>
+</div>
+
+<div id="nav">
+<x>
+<br>
+week Amount:{{weekAmount}}
+WEEK NO: {{weekNo}}
+
+
+
+  {% with ''|center:weekAmount as range %}
+    {% for _ in range %}
+    
+
+  <form action="tecQuiz"> 
+
+       <input type="hidden" name="Amount" value={{weekAmount}}>
+
+       <input type="hidden" name="hiddenWeekNo" value={{forloop.counter}}>
+
+       <input type="hidden" name="teacherName" value={{tecName}}>
+    
+      <input type="hidden" name="hiddenCrsNo" value={{crsNo}}>
+
+      <input id="bigbutton" type="submit" name="weekNo" value={{forloop.counter}} />        
+        
+  </form>
+
+
+
+    {% endfor %}
+{% endwith %}
+
+  
+    
+  </div>
+</div>
+
+
+
+</x>
+</div>
+
+<div id="section">
+
+
+
+{% for i in context5CourseMetarials %}
+  <tr>
+    <td>
+      <form action="tecQuiz3">  
+                
+        <input type="hidden" name="hiddenWeekNo" value={{weekNo}}>
+        <input type="hidden" name="hiddenCrsNo" value={{crsNo}}>
+        <input type="hidden" name="quizno" value={{i.quizNo}}> 
+         <input type="hidden" name="teacherName" value={{tecName}}> 
+
+         <input type="hidden" name="Amount" value={{weekAmount}}>
+
+        <input id="bigbutton" type="submit" name="x" value="Quiz No: {{i.quizNo}}">
+      </form>
+    </td> 
+  </tr>
+
+{% endfor %}
+
+<br><br><br><br>
+<form action="courseDetailForTec">  
+                
+        <input type="hidden" name="hiddenWeekNo" value={{weekNo}}>
+        <input type="hidden" name="hiddenCrsNo" value={{crsNo}}>
+        <input type="hidden" name="quizno" value={{i.quizNo}}> 
+         <input type="hidden" name="teacherName" value={{tecName}}> 
+
+         <input type="hidden" name="Amount" value={{weekAmount}}>
+
+        <input id="bigbutton" type="submit" name="x" value="back">
+      </form>
+
+
+</div>
+
+<div id="footer">
+ Copyright JEWEL
+</div>
+
+</body>
+</html>
+
+
+
+

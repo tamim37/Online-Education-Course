@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+
+input[type=submit] {
+    width: 20%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+
+
+</style>
+<body>
+
+<h3>Add  video</h3>
+
+
+<form action="addVideoIntoWeek3">
+
+<input type="hidden" name="insertedWeekNo" value={{WeekNo}}>
+
+    <input type="hidden" name="crsNo"
+     value={{crsNo}}>
+<!-- 
+    <a href="{% url 'music:detail'  videoSection.id %")">
+
+    hello
+
+    </src="{{videoSection.video.url}}">
+    </a> -->
+     
+  <input type="file" name="videoFile" >
+  <input type="submit">
+</form>
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
