@@ -138,7 +138,7 @@ class Comments(models.Model):
 	comment=models.CharField(max_length=300)
 	# comment=models.CharField("person's first name",max_length=300)
 	userName=models.CharField(max_length=90,null=True)
-	# time=models.DateTimeField(auto_now=False,auto_now_add=True,null=True,blank=True)
+	time=models.DateTimeField(auto_now=False,auto_now_add=True,null=True,blank=True)
 	# time2=models.DateTimeField(auto_now=True,auto_now_add=False,null=True,blank=True)
 
 	# userName2=models.CharField(max_length=90,null=True)
